@@ -1,0 +1,10 @@
+package com.order_service.Service;
+
+import com.order_service.Entity.Order;
+
+public interface OrderService {
+	Order placseOrder(Order order);
+	Order updateOrder(Long OrderId,Order orderDetails);
+	void cancelOrder(Long OrderId);
+	
+}

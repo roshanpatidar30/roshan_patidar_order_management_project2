@@ -1,0 +1,12 @@
+package com.order_service.cache;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class OrderService {
+    @Cacheable("orders")
+    public Order getOrderById(Long orderId) {
+        return orderRepository.findById(orderId)
+            .orElseThrow(() -> new ResourceNotFoundException("Order not found"));
+    }
+}

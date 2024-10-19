@@ -1,0 +1,6 @@
+package com.order_service.feignclient;
+@FeignClient("product-service")
+public interface ProductClient {
+    @GetMapping("/products/{productId}")
+    Product getProductById(@PathVariable Long productId);
+}

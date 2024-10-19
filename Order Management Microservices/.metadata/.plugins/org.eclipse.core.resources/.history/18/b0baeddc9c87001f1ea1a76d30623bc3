@@ -1,0 +1,5 @@
+package com.order_service.Repository;
+
+public interface OderRepository {
+
+}

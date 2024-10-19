@@ -1,0 +1,27 @@
+package com.order_service.Service.Impl;
+
+import com.order_service.Entity.Order;
+import com.order_service.Service.OrderService;
+
+public class OrderServiceImpl implements OrderService {
+
+	private OrderRepo
+	@Override
+	public Order placseOrder(Order order) {
+		order.
+		return null;
+	}
+
+	@Override
+	public Order updateOrder(Long OrderId, Order orderDetails) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void cancelOrder(Long OrderId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

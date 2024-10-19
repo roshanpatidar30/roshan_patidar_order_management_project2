@@ -1,0 +1,32 @@
+package com.order_service.Service.Impl;
+
+import java.time.LocalDate;
+import java.util.Optional;
+
+import com.order_service.Entity.Order;
+import com.order_service.Repository.OrderRepository;
+import com.order_service.Service.OrderService;
+
+public class OrderServiceImpl implements OrderService {
+
+	private OrderRepository orderRepository;
+	@Override
+	public Order placseOrder(Order order) {
+		order.setOrderDate(LocalDate.now());
+		order.setStatus("PLACED");
+		return orderRepository.save(order);
+	}
+	public Order updateOrder(Long OrderId, Order orderDetails) {
+		Optional<Order> order = orderRepository.findById(OrderId);
+		 order.setStatus(orderDetails.getStatus());
+	        order.setTotalAmount(orderDetails.getTotalAmount());
+		return orderRepository.save(order);
+	}
+	@Override
+	public void cancelOrder(Long OrderId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+}
